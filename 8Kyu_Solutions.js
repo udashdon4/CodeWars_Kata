@@ -1,14 +1,15 @@
 /*
 Sim Dash @Udashdon4
-My solution code for 8kyu challenges (Kata)
-CodeWars
+My solution code for challenges (Kata)
+CodeWars Level: 8Kyu
 
 Format:
 1. Challenge (Kata)
 2. Solution
 */
 
-/*
+/*___________________________________________________________________________
+### 1 ###
 You get an array of numbers, return the sum of all of the positives ones.
 Example [1,-4,7,12] => 1 + 7 + 12 = 20
 Note: if there is nothing to sum, the sum is default to 0.
@@ -17,4 +18,16 @@ function positiveSum(arr) {
     let sum = 0
     arr.forEach (n => {n > 0 ? sum +=n : 0 })
     return sum                   
+  }
+
+/*___________________________________________________________________________
+### 2 ###
+You're writing code to control your town's traffic lights. You need a function
+to handle each change from green, to yellow, to red, and then to green again.
+Complete the function that takes a string as an argument representing the 
+current state of the light and returns a string representing the state the light 
+should change to.For example, when the input is green, output should be yellow.
+*/
+function updateLight(current) {
+    return current === "green" ? "yellow" : current === "yellow" ? "red" : "green"
   }
