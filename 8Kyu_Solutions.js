@@ -18,7 +18,7 @@ function positiveSum(arr) {
     let sum = 0
     arr.forEach (n => {n > 0 ? sum +=n : 0 })
     return sum                   
-  }
+}
 
 /*___________________________________________________________________________
 ### 2 ###
@@ -30,7 +30,7 @@ should change to.For example, when the input is green, output should be yellow.
 */
 function updateLight(current) {
     return current === "green" ? "yellow" : current === "yellow" ? "red" : "green"
-  }
+}
 
 /*___________________________________________________________________________
 ### 3 ###
@@ -43,4 +43,8 @@ If no occurrences can be found, a count of 0 should be returned.
 */
 function strCount(str, letter){  
     return str.split('').filter(n => n.includes(letter)).length 
-  }
+}
+
+/*___________________________________________________________________________
+
+*/
