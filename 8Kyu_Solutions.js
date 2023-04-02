@@ -1,6 +1,7 @@
 /*
 Sim Dash @Udashdon4
 My solution code for challenges (Kata)
+Language: JavaScript
 CodeWars Level: 8Kyu
 
 Format:
@@ -58,7 +59,7 @@ time = 11.8--> litres = 5
 */
 function litres(time) {
     return Math.floor(time*0.5)
-  }
+}
 
 /*___________________________________________________________________________
 ### 5 ###
@@ -89,7 +90,7 @@ function sum (numbers) {
      else {
        return 0
      }
- };
+};
 
 /*___________________________________________________________________________
 ### 6 ###
@@ -104,7 +105,7 @@ function cockroachSpeed(s) {
     let cmpmin = cmphr * (1/60)
     let cmpsec = cmpmin * (1/60)
     return parseInt(s * cmpsec)
-  }
+}
 
 /*___________________________________________________________________________
 ### 7 ###
@@ -123,4 +124,24 @@ function sumArray(array) {
     else {
       return array.sort((a,b) => a-b).slice(1,-1).reduce((a,b) => a + b, 0)
     }
-  }
+}
+
+/*___________________________________________________________________________
+### 7 ###
+Your start-up's BA has told marketing that your website has a large audience 
+in Scandinavia and surrounding countries. Marketing thinks it would be great to 
+welcome visitors to the site in their own language. Luckily you already use an 
+API that detects the user's location, so this is an easy win.
+The Task
+Think of a way to store the languages as a database (eg an object). The languages
+are listed below so you can copy and paste!Write a 'welcome' function that takes
+a parameter 'language' (always a string), and returns a greeting - if you have 
+it in your database. It should default to English if the language is not in the 
+database, or in the event of an invalid input.
+The Database
+english: 'Welcome',
+czech: 'Vitejte',
+danish: 'Velkomst',
+dutch: 'Welkom',
+etc....
+*/
