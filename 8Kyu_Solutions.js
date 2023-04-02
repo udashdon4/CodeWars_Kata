@@ -48,8 +48,9 @@ function strCount(str, letter){
 /*___________________________________________________________________________
 ### 4 ###
 Nathan loves cycling.
-Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
-You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of 
+water per hour of cycling.You get given the time in hours and you need to return
+the number of litres Nathan will drink, rounded to the smallest value.
 For example:
 time = 3 ----> litres = 1
 time = 6.7---> litres = 3
@@ -58,4 +59,21 @@ time = 11.8--> litres = 5
 function litres(time) {
     return Math.floor(time*0.5)
   }
-  
+
+/*___________________________________________________________________________
+### 5 ###
+Write a function that takes an array of numbers and returns the sum of the 
+numbers. The numbers can be negative or non-integer. If the array does not 
+contain any numbers then you should return 0.Examples:
+
+Input: [1, 5.2, 4, 0, -1]
+Output: 9.2
+Input: []
+Output: 0
+Input: [-2.398]
+Output: -2.398
+Assumptions
+    You can assume that you are only given numbers.
+    You cannot assume the size of the array.
+    You can assume that you do get an array and if the array is empty, return 0.
+*/
