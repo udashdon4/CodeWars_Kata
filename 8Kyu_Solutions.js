@@ -72,8 +72,55 @@ Input: []
 Output: 0
 Input: [-2.398]
 Output: -2.398
-Assumptions
-    You can assume that you are only given numbers.
-    You cannot assume the size of the array.
-    You can assume that you do get an array and if the array is empty, return 0.
+Assumptions:
+You can assume that you are only given numbers.
+You cannot assume the size of the array.
+You can assume that you do get an array and if the array is empty, return 0.
 */
+function sum (numbers) {
+    "use strict";
+     let sum = 0
+     if (numbers.length >= 1) {
+       numbers.forEach (n => {
+         sum += n
+       })
+       return sum 
+     }
+     else {
+       return 0
+     }
+ };
+
+/*___________________________________________________________________________
+### 6 ###
+The cockroach is one of the fastest insects. Write a function which takes its 
+speed in km per hour and returns it in cm per second, rounded down to the integer 
+For example:
+1.08 --> 30
+*/
+function cockroachSpeed(s) {
+    let meph = 1000/1
+    let cmphr = meph * 100/1
+    let cmpmin = cmphr * (1/60)
+    let cmpsec = cmpmin * (1/60)
+    return parseInt(s * cmpsec)
+  }
+
+/*___________________________________________________________________________
+### 7 ###
+Sum all the numbers of a given array ( cq. list ), except the highest and the
+lowest element ( by value, not by index! ).The highest or lowest element 
+respectively is a single element at each edge, even if there are more than one
+with the same value.Mind the input validation.
+Example
+{ 6, 2, 1, 8, 10 } => 16
+{ 1, 1, 11, 2, 3 } => 6
+*/
+function sumArray(array) {
+    if (array == null || array.length < 2 || array == []) {
+      return 0
+    }
+    else {
+      return array.sort((a,b) => a-b).slice(1,-1).reduce((a,b) => a + b, 0)
+    }
+  }
