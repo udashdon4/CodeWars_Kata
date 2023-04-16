@@ -5,6 +5,7 @@ Language: JavaScript
 CodeWars Level: 8Kyu
 Count: 11-20
 
+
 Format:
 1. Challenge (Kata)
 2. Solution
