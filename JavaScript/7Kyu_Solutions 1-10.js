@@ -41,3 +41,54 @@ function DNAStrand(dna){
     }
     return dna.replace(/[TACG]/g, i => m[i])
   }
+
+/*___________________________________________________________________________
+### 3 ###
+Your task is to write a function which returns the sum of following series upto nth term(parameter).
+Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
+Rules:
+    You need to round the answer to 2 decimal places and return it as String.
+
+    If the given value is 0 then it should return 0.00
+
+    You will only be given Natural Numbers as arguments.
+Examples:(Input --> Output)
+1 --> 1 --> "1.00"
+2 --> 1 + 1/4 --> "1.25"
+5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57"
+*/
+function SeriesSum(n)
+{
+ let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum += 1 / (3 * (i - 1) + 1);
+  }
+  return sum.toFixed(2)
+}
+
+/*___________________________________________________________________________
+### 4 ###
+you need to create a function that when provided with a triplet, returns the 
+index of the numerical element that lies between the other two elements.
+The input to the function will be an array of three distinct numbers (Haskell: a tuple).
+For example:
+gimme([2, 3, 1]) => 0
+*/
+    var gimme = function (inputArray) {
+        if ((inputArray[0] < inputArray[1] && inputArray[0] > inputArray[2])
+          || (inputArray[0] > inputArray[1] && inputArray[0] < inputArray[2]))
+          return 0;
+          
+        if ((inputArray[1] < inputArray[0] && inputArray[1] > inputArray[2])
+          || (inputArray[1] > inputArray[0] && inputArray[1] < inputArray[2]))
+          return 1;
+          
+        if ((inputArray[2] < inputArray[0] && inputArray[2] > inputArray[1])
+          || (inputArray[2] > inputArray[0] && inputArray[2] < inputArray[1]))
+          return 2;
+      };
+
+/*___________________________________________________________________________
+### 5 ###
+
+*/
