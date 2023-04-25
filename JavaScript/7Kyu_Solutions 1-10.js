@@ -97,9 +97,15 @@ Examples (Input --> Output)
 "1234"   -->  true
 "12345"  -->  false
 "a234"   -->  false
-
-
 */
+function validatePIN (pin) {
+  if (/^[0-9]*$/.test(pin)) {
+    if (pin.length === 4 || pin.length === 6 ) {
+      return true
+    }
+  }
+  return false
+}
 
 /*___________________________________________________________________________
 ### 7 ###
