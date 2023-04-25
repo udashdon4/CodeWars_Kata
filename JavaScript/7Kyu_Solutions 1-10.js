@@ -108,11 +108,13 @@ function validatePIN (pin) {
 }
 
 /*___________________________________________________________________________
-### 7 ###
+### 6 ###
 Sometimes there are problems: lack of colors, technical malfunction and a "bad" 
 control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
 You have to write a function printer_error which given a string will return the 
-error rate of the printer as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. Don't reduce this fraction to a simpler expression.
+error rate of the printer as a string representing a rational whose numerator is 
+the number of errors and the denominator the length of the control string. Don't reduce 
+this fraction to a simpler expression.
 The string has a length greater or equal to one and contains only letters from ato z.
 Examples:
 s="aaabbbbhaijjjm"
@@ -125,14 +127,23 @@ function printerError(s) {
 }
 
 /*___________________________________________________________________________
-### 8 ###
-
+### 7 ###
+Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
 */
+function squareDigits(num){
+  return parseInt(num.toString().split('').map(item => item ** 2).join(''))
+}
+/*___________________________________________________________________________
+### 8 ###
+Create a function that returns the sum of the two lowest positive numbers given
+an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+*/
+function sumTwoSmallestNumbers(numbers) {  
+  let sorted = numbers.sort((a,b) => a-b)
+  return sorted[0] + sorted[1]
+}
 
 /*___________________________________________________________________________
 ### 9 ###
-
-*/
-
-/*___________________________________________________________________________
-### 10 ###
