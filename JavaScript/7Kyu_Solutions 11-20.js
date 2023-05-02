@@ -66,17 +66,7 @@ Examples
 1,5,3  --> 5 (1 + 4)
 etc.
 */
-function nbDig(n, d) {
-  let arr = []
-  let counter = 0
-  for (let i = 0; i <= n; i++) {
-    arr += i*i
-  }
-  for (let j = 0; j < arr.length; j++) {
-    counter += arr[j].includes(d)
-    }
-    return counter
-}
+
 
 /*___________________________________________________________________________
 ### 14 ###
@@ -94,12 +84,37 @@ the k*k that contain the digit 1 are:
 1, 16, 81, 100, 121, 144, 169, 196, 361, 441.
 So there are 11 digits 1 for the squares of numbers between 0 and 25.
 */
-
+function nbDig(n, d) {
+  let arr = []
+  let counter = 0
+  for (let i = 0; i <= n; i++) {
+    arr += i*i
+  }
+  for (let j = 0; j < arr.length; j++) {
+    counter += arr[j].includes(d)
+    }
+    return counter
+}
 
 /*___________________________________________________________________________
 ### 15 ###
-
+Given an integral number, determine if it's a square number
+    In mathematics, a square number or perfect square is an integer that is the 
+    square of an integer; in other words, it is the product of some integer with itself.
+The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+Examples
+-1  =>  false
+ 0  =>  true
+ 3  =>  false
+ 4  =>  true
+25  =>  true
+26  =>  false
 */
+var isSquare = function(n){
+  return n === 0 ? true : n % Math.sqrt(n) == 0 ? true : false
+}
+
+
 
 /*___________________________________________________________________________
 ### 16 ###
