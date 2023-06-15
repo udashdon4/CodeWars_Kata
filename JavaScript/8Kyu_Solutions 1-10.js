@@ -62,6 +62,7 @@ function litres(time) {
     return Math.floor(time*0.5)
 }
 
+
 /*___________________________________________________________________________
 ### 5 ###
 Write a function that takes an array of numbers and returns the sum of the 
