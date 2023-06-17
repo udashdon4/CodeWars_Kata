@@ -63,6 +63,7 @@ function litres(time) {
 }
 
 
+
 /*___________________________________________________________________________
 ### 5 ###
 Write a function that takes an array of numbers and returns the sum of the 
